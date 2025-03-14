@@ -6,13 +6,11 @@ let list = []
 
 const fetchProcesses = async () => {
     const browser = await puppeteer.launch({
-        headless: false,
+        // headless: false,
         // devtools: true
     })
 
-    const context = await browser.createBrowserContext()
-
-    const page = await context.newPage()
+    const page = await browser.newPage()
     await page.goto(process.env.CJPG_URL)
     await page.setViewport({width: 1000, height: 1000})
 
@@ -41,8 +39,8 @@ const fetchProcesses = async () => {
                 let texto =                 p.querySelector('td:nth-child(2) tr:nth-child(9) div:nth-child(2) span')
                 sanitizeNode(texto)
                 texto = texto.innerText
-    
-                return { processo, comarca, foro, disponibilizacao, texto }
+
+                return { processo, comarca, foro, disponibilizacao }
             })
         })
     
@@ -51,22 +49,60 @@ const fetchProcesses = async () => {
         await page.click('.trocaDePagina a:last-of-type')
         currentPage++
     }
+    
+    await browser.close()
 
-    await context.close()
-
-    storeProcesses()
+    // storeProcesses()
+    filterList()
 }
 
 const fetchProcessDetails = async (processNumber) => {
-    const newPage = await context.newPage()
-    await newPage.goto(process.env.CJPG_URL)
+    const browser = await puppeteer.launch({
+        // headless: false,
+        // devtools: true,
+    })
 
-    await newPage.type('.form-control-nuProcesso', processNumber)
-    await newPage.click('#botaoConsultarProcessos')
+    const page = await browser.newPage()
+    await page.goto(process.env.CPOPG_URL)
+    await page.setViewport({width: 1000, height: 1000})
+    
+    await page.type('#numeroDigitoAnoUnificado', processNumber.slice(0,15))
+    await page.type('#foroNumeroUnificado', processNumber.slice(21, 25))
+
+    await page.locator('#botaoConsultarProcessos').click()
+
+    let lawyer = await page.waitForSelector('.fundoClaro .nomeParteEAdvogado')
+
+    lawyer = await lawyer.evaluate(node => {
+        let text = node.innerText
+        const position = text.search('Advogado:')
+        return position > 0 ? text.slice(position + 10, text.length) : false
+    })
+    
+    const processAmount = await page.waitForSelector('#valorAcaoProcesso')
+    const parsedAmount = await processAmount.evaluate(node => node.innerText.replaceAll('R$', '').trim())
+    
+    await browser.close()
+
+    return{ lawyer, parsedAmount }
+}
+
+const filterList = () => {
+    list = list.flat()
+    // list = list.filter(p => p.processo)
+    list = list.map(p => {
+        let processNumber = p.processo
+        let details = {}
+        fetchProcessDetails(processNumber).then(res => {
+            details = res   
+        })
+        return { ...p, details }
+    })
+    console.log(list[0])
+    // storeProcesses()
 }
 
 const storeProcesses = async () => {
-    list = list.flat()
     writeFileSync('processos.json', JSON.stringify(list, null, 2), 'utf-8')
     console.log('Mal feito, feito!')
 }
