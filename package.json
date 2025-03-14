@@ -1,0 +1,14 @@
+{
+    "name": "esajbot",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "This is a bot to scrape data from TJSP E-SAJ.",
+    "dependencies": {
+        "dotenv": "^16.4.7",
+        "puppeteer": "^24.4.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1"
+    },
+    "license": "MIT"
+}
