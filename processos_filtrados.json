@@ -1,0 +1,50 @@
+[
+  {
+    "processo": "0001634-06.2024.8.26.0191",
+    "comarca": "Ferraz de Vasconcelos",
+    "foro": "Foro de Ferraz de Vasconcelos",
+    "disponibilizacao": "05/03/2025",
+    "has_lawyer": false,
+    "amount": "5.834,86"
+  },
+  {
+    "processo": "0002369-39.2024.8.26.0191",
+    "comarca": "Ferraz de Vasconcelos",
+    "foro": "Foro de Ferraz de Vasconcelos",
+    "disponibilizacao": "05/03/2025",
+    "has_lawyer": false,
+    "amount": "26.728,14"
+  },
+  {
+    "processo": "0011157-14.2024.8.26.0071",
+    "comarca": "Bauru",
+    "foro": "Foro de Bauru",
+    "disponibilizacao": "05/03/2025",
+    "has_lawyer": false,
+    "amount": "28.240,00"
+  },
+  {
+    "processo": "0001634-06.2024.8.26.0191",
+    "comarca": "Ferraz de Vasconcelos",
+    "foro": "Foro de Ferraz de Vasconcelos",
+    "disponibilizacao": "05/03/2025",
+    "has_lawyer": false,
+    "amount": "5.834,86"
+  },
+  {
+    "processo": "0002369-39.2024.8.26.0191",
+    "comarca": "Ferraz de Vasconcelos",
+    "foro": "Foro de Ferraz de Vasconcelos",
+    "disponibilizacao": "05/03/2025",
+    "has_lawyer": false,
+    "amount": "26.728,14"
+  },
+  {
+    "processo": "0011157-14.2024.8.26.0071",
+    "comarca": "Bauru",
+    "foro": "Foro de Bauru",
+    "disponibilizacao": "05/03/2025",
+    "has_lawyer": false,
+    "amount": "28.240,00"
+  }
+]
