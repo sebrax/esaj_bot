@@ -5,6 +5,8 @@ import { writeFileSync } from 'fs'
 let list = []
 
 const fetchProcesses = async () => {
+    console.info('Buscando processos...')
+
     const browser = await puppeteer.launch({
         // headless: false,
         // devtools: true
@@ -18,6 +20,7 @@ const fetchProcesses = async () => {
     let totalPages = process.env.TOTAL_PAGES || 1
 
     while (currentPage <= totalPages) {
+        
         const processes = await page.evaluate(() => {
             function sanitizeNode(node) {
                 if (node.nodeType === Node.TEXT_NODE) {
@@ -46,17 +49,25 @@ const fetchProcesses = async () => {
     
         list.push(processes)
         
-        await page.click('.trocaDePagina a:last-of-type')
+        await page.locator('.trocaDePagina a:last-of-type').click()
         currentPage++
     }
     
     await browser.close()
 
-    // storeProcesses()
-    filterList()
+    console.info('Processos encontrados: ', [...list.flat()].length)
+    console.log('Iniciando segunda etapa...')
+
+    filterList().then(() => {
+        store(list)
+    })
 }
 
-const fetchProcessDetails = async (processNumber) => {
+const fetchProcessDetails = async (processNumber, index) => {
+    setTimeout(() => {}, 3000)
+
+    console.info(`Buscando detalhes do processo ${index + 1} de ${list.length}...`)
+
     const browser = await puppeteer.launch({
         // headless: false,
         // devtools: true,
@@ -66,45 +77,52 @@ const fetchProcessDetails = async (processNumber) => {
     await page.goto(process.env.CPOPG_URL)
     await page.setViewport({width: 1000, height: 1000})
     
-    await page.type('#numeroDigitoAnoUnificado', processNumber.slice(0,15))
-    await page.type('#foroNumeroUnificado', processNumber.slice(21, 25))
+    await page.locator('#numeroDigitoAnoUnificado').fill(processNumber.slice(0,15))
+    await page.locator('#foroNumeroUnificado').fill(processNumber.slice(21, 25))
 
-    await page.locator('#botaoConsultarProcessos').click()
+    await page.$eval('#botaoConsultarProcessos', el => el.click())
 
-    let lawyer = await page.waitForSelector('.fundoClaro .nomeParteEAdvogado')
-
-    lawyer = await lawyer.evaluate(node => {
-        let text = node.innerText
-        const position = text.search('Advogado:')
-        return position > 0 ? text.slice(position + 10, text.length) : false
+    let lawyerSection = await page.waitForSelector('#tablePartesPrincipais tr:nth-child(1) td:nth-child(2)')
+    const hasLawyer = await lawyerSection.evaluate(node => {
+        return /Advogada|Advogado/i.test(node.innerText)
     })
     
-    const processAmount = await page.waitForSelector('#valorAcaoProcesso')
-    const parsedAmount = await processAmount.evaluate(node => node.innerText.replaceAll('R$', '').trim())
-    
+    let parsedAmount = null
+
+    try {
+        const amount = await page.waitForSelector('#valorAcaoProcesso')
+        parsedAmount = await amount.evaluate(node => {
+            return node.innerText.replaceAll('R$', '').trim()
+        })
+    } catch (error) {
+    }	
+
     await browser.close()
 
-    return{ lawyer, parsedAmount }
+    return { hasLawyer, parsedAmount }
 }
 
-const filterList = () => {
+const filterList = async () => {
     list = list.flat()
-    // list = list.filter(p => p.processo)
-    list = list.map(p => {
-        let processNumber = p.processo
-        let details = {}
-        fetchProcessDetails(processNumber).then(res => {
-            details = res   
+
+    for(let i = 0; i < list.length; i++) {
+        await fetchProcessDetails(list[i].processo, i).then(res => {
+            list[i].has_lawyer = res.hasLawyer
+            list[i].amount = res.parsedAmount
         })
-        return { ...p, details }
-    })
-    console.log(list[0])
-    // storeProcesses()
+    }
 }
 
-const storeProcesses = async () => {
+const store = async (list) => {
+    // const filtered = list.filter(p => p.has_lawyer)
     writeFileSync('processos.json', JSON.stringify(list, null, 2), 'utf-8')
     console.log('Mal feito, feito!')
+    /* if(filtered.length > 0) {
+        console.log(`Encontrados ${filtered} processos com advogados!`)
+    }
+    else {
+        console.log('Nenhum processo sem advogados encontrado :(')
+    } */
 }
 
 fetchProcesses()
