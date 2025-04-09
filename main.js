@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import puppeteer from 'puppeteer'
 import { writeFileSync } from 'fs'
+import { useGetUpdatedUrl } from './utils.js'
 
 let list = []
 
@@ -13,14 +14,14 @@ const fetchProcesses = async () => {
     })
 
     const page = await browser.newPage()
-    await page.goto(process.env.CJPG_URL)
+    await page.goto(useGetUpdatedUrl())
     await page.setViewport({width: 1000, height: 1000})
 
     let currentPage = 1
     let totalPages = process.env.TOTAL_PAGES || 1
 
     while (currentPage <= totalPages) {
-        
+
         const processes = await page.evaluate(() => {
             function sanitizeNode(node) {
                 if (node.nodeType === Node.TEXT_NODE) {
@@ -31,9 +32,9 @@ const fetchProcesses = async () => {
                     Array.from(node.childNodes).forEach(sanitizeNode);
                 }
             }
-    
+
             const processes = document.querySelectorAll('.fundocinza1')
-    
+
             return Array.from(processes).map(p => {
                 const processo =            p.querySelector('td:nth-child(2) tr:nth-child(1) span')?.innerText?.trim()
                 const comarca =             p.querySelector('td:nth-child(2) tr:nth-child(5)')?.innerText?.trim().replace('Comarca: ', '')
@@ -46,13 +47,13 @@ const fetchProcesses = async () => {
                 return { processo, comarca, foro, disponibilizacao }
             })
         })
-    
+
         list.push(processes)
-        
+
         await page.locator('.trocaDePagina a:last-of-type').click()
         currentPage++
     }
-    
+
     await browser.close()
 
     console.info('Processos encontrados: ', [...list.flat()].length)
@@ -76,17 +77,24 @@ const fetchProcessDetails = async (processNumber, index) => {
     const page = await browser.newPage()
     await page.goto(process.env.CPOPG_URL)
     await page.setViewport({width: 1000, height: 1000})
-    
+
     await page.locator('#numeroDigitoAnoUnificado').fill(processNumber.slice(0,15))
     await page.locator('#foroNumeroUnificado').fill(processNumber.slice(21, 25))
 
     await page.$eval('#botaoConsultarProcessos', el => el.click())
 
-    let lawyerSection = await page.waitForSelector('#tablePartesPrincipais tr:nth-child(1) td:nth-child(2)')
-    const hasLawyer = await lawyerSection.evaluate(node => {
-        return /Advogada|Advogado/i.test(node.innerText)
-    })
-    
+    let hasLawyer = null
+
+    try {
+        let lawyerSection = await page.waitForSelector('#tablePartesPrincipais tr:nth-child(1) td:nth-child(2)')
+        hasLawyer = await lawyerSection.evaluate(node => {
+            return /Advogada|Advogado/i.test(node.innerText)
+        })
+    } catch (error) {
+        console.error('Sessão Advogado não localizada')
+        return { hasLawyer: false }
+    }
+
     let parsedAmount = null
 
     try {
@@ -95,7 +103,7 @@ const fetchProcessDetails = async (processNumber, index) => {
             return node.innerText.replaceAll('R$', '').trim()
         })
     } catch (error) {
-    }	
+    }
 
     await browser.close()
 
@@ -114,15 +122,10 @@ const filterList = async () => {
 }
 
 const store = async (list) => {
-    // const filtered = list.filter(p => p.has_lawyer)
-    writeFileSync('processos.json', JSON.stringify(list, null, 2), 'utf-8')
+    const filtered = list.filter(p => p.has_lawyer === false)
+    writeFileSync('processos.json', JSON.stringify(filtered, null, 2), 'utf-8')
     console.log('Mal feito, feito!')
-    /* if(filtered.length > 0) {
-        console.log(`Encontrados ${filtered} processos com advogados!`)
-    }
-    else {
-        console.log('Nenhum processo sem advogados encontrado :(')
-    } */
+    console.info(filtered.length > 0 ? `Encontrados ${filtered.length} processos sem advogados de ${list.length} analizados :D` : 'Nenhum processo sem advogados encontrado :(')
 }
 
 fetchProcesses()
