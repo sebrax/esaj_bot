@@ -56,10 +56,17 @@ const fetchProcesses = async () => {
 
     await browser.close()
 
-    console.info('Processos encontrados: ', [...list.flat()].length)
-    console.log('Iniciando segunda etapa...')
+    const seen = new Set()
+    list = list.flat().filter(p => {
+        const duplicate = seen.has(p.processo)
+        seen.add(p.processo)
+        return !duplicate
+    })
 
-    filterList().then(() => {
+    console.info(`Processos encontrados: ${list.length}`)
+    console.log('Agora buscaremos o valor dos processos e se já possuem advogados...')
+
+    addDetails().then(() => {
         store(list)
     })
 }
@@ -110,9 +117,7 @@ const fetchProcessDetails = async (processNumber, index) => {
     return { hasLawyer, parsedAmount }
 }
 
-const filterList = async () => {
-    list = list.flat()
-
+const addDetails = async () => {
     for(let i = 0; i < list.length; i++) {
         await fetchProcessDetails(list[i].processo, i).then(res => {
             list[i].has_lawyer = res.hasLawyer
@@ -121,11 +126,13 @@ const filterList = async () => {
     }
 }
 
-const store = async (list) => {
-    const filtered = list.filter(p => p.has_lawyer === false)
-    writeFileSync('processos.json', JSON.stringify(filtered, null, 2), 'utf-8')
+const store = async (list, unfiltered = false) => {
+    let data = unfiltered ? list : list.filter(p => p.has_lawyer === false)
+
+    writeFileSync('processos.json', JSON.stringify(data, null, 2), 'utf-8')
     console.log('Mal feito, feito!')
-    console.info(filtered.length > 0 ? `Encontrados ${filtered.length} processos sem advogados de ${list.length} analizados :D` : 'Nenhum processo sem advogados encontrado :(')
+
+    console.info(data.length > 0 ? `Encontrados ${data.length} processos sem advogados de ${list.length} analizados :D` : 'Nenhum processo sem advogados encontrado :(')
 }
 
 fetchProcesses()
