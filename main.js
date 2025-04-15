@@ -107,7 +107,7 @@ const fetchProcessDetails = async (processNumber, index) => {
     try {
         const amount = await page.waitForSelector('#valorAcaoProcesso')
         parsedAmount = await amount.evaluate(node => {
-            return node.innerText.replaceAll('R$', '').trim()
+            return node.innerText.trim()
         })
     } catch (error) {
     }

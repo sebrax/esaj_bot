@@ -1,266 +1,410 @@
 [
   {
-    "processo": "0005784-85.2024.8.26.0011",
-    "comarca": "SÃO PAULO",
-    "foro": "Foro Regional XI - Pinheiros",
-    "disponibilizacao": "09/04/2025",
+    "processo": "1009665-83.2024.8.26.0292",
+    "comarca": "Jacareí",
+    "foro": "Foro de Jacareí",
+    "disponibilizacao": "15/04/2025",
     "has_lawyer": false,
-    "amount": "16.160,00"
+    "amount": "R$         7.500,00"
   },
   {
-    "processo": "0006977-65.2024.8.26.0196",
-    "comarca": "Franca",
-    "foro": "Foro de Franca",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0000173-25.2025.8.26.0268",
+    "comarca": "Itapecerica da Serra",
+    "foro": "Foro de Itapecerica da Serra",
+    "disponibilizacao": "15/04/2025",
     "has_lawyer": false,
-    "amount": "28.000,00"
+    "amount": "R$         5.280,00"
   },
   {
-    "processo": "0004817-25.2024.8.26.0016",
+    "processo": "0000512-81.2025.8.26.0268",
+    "comarca": "Itapecerica da Serra",
+    "foro": "Foro de Itapecerica da Serra",
+    "disponibilizacao": "15/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         4.697,91"
+  },
+  {
+    "processo": "0010587-96.2024.8.26.0016",
     "comarca": "SÃO PAULO",
     "foro": "Foro Central Juizados Especiais Cíveis",
-    "disponibilizacao": "09/04/2025",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "8.190,00"
+    "amount": "R$         3.000,00"
   },
   {
-    "processo": "0016568-36.2024.8.26.0007",
+    "processo": "0014028-15.2024.8.26.0007",
     "comarca": "SÃO PAULO",
     "foro": "Foro Regional VII - Itaquera",
-    "disponibilizacao": "09/04/2025",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "10.085,00"
+    "amount": "R$         5.417,51"
   },
   {
-    "processo": "0002964-32.2025.8.26.0602",
-    "comarca": "Sorocaba",
-    "foro": "Foro de Sorocaba",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0009320-89.2024.8.26.0016",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Central Juizados Especiais Cíveis",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "30.360,00"
+    "amount": "R$         28.240,00"
   },
   {
-    "processo": "0001712-91.2025.8.26.0602",
-    "comarca": "Sorocaba",
-    "foro": "Foro de Sorocaba",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0019735-61.2024.8.26.0007",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional VII - Itaquera",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "3.500,00"
+    "amount": "R$         6.048,49"
   },
   {
-    "processo": "0001923-30.2025.8.26.0602",
-    "comarca": "Sorocaba",
-    "foro": "Foro de Sorocaba",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0002840-22.2025.8.26.0320",
+    "comarca": "Limeira",
+    "foro": "Foro de Limeira",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "30.024,94"
+    "amount": "R$         1.194,40"
   },
   {
-    "processo": "0003699-65.2025.8.26.0602",
-    "comarca": "Sorocaba",
-    "foro": "Foro de Sorocaba",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0001765-84.2025.8.26.0016",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Central Juizados Especiais Cíveis",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "9.541,20"
+    "amount": "R$         30.360,00"
   },
   {
-    "processo": "0000329-78.2025.8.26.0602",
-    "comarca": "Sorocaba",
-    "foro": "Foro de Sorocaba",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0001996-14.2025.8.26.0016",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Central Juizados Especiais Cíveis",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "6.798,00"
+    "amount": "R$         15.000,00"
   },
   {
-    "processo": "0002095-69.2025.8.26.0602",
-    "comarca": "Sorocaba",
-    "foro": "Foro de Sorocaba",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0000043-83.2023.8.26.0016",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Central Juizados Especiais Cíveis",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "30.360,00"
+    "amount": "R$         26.040,00"
   },
   {
-    "processo": "0000312-65.2025.8.26.0659",
-    "comarca": "Vinhedo",
-    "foro": "Foro de Vinhedo",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "6.389,99"
-  },
-  {
-    "processo": "0000360-39.2025.8.26.0072",
-    "comarca": "Bebedouro",
-    "foro": "Foro de Bebedouro",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "545,50"
-  },
-  {
-    "processo": "0001687-95.2025.8.26.0564",
-    "comarca": "São Bernardo do Campo",
-    "foro": "Foro de São Bernardo do Campo",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "5.843,05"
-  },
-  {
-    "processo": "0018313-29.2024.8.26.0564",
-    "comarca": "São Bernardo do Campo",
-    "foro": "Foro de São Bernardo do Campo",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "12.770,00"
-  },
-  {
-    "processo": "0002754-29.2024.8.26.0565",
+    "processo": "0003825-66.2024.8.26.0565",
     "comarca": "São Caetano do Sul",
     "foro": "Foro de São Caetano do Sul",
-    "disponibilizacao": "09/04/2025",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "6.272,40"
+    "amount": "R$         25.640,46"
   },
   {
-    "processo": "0011459-43.2024.8.26.0071",
-    "comarca": "Bauru",
-    "foro": "Foro de Bauru",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0002206-70.2025.8.26.0564",
+    "comarca": "São Bernardo do Campo",
+    "foro": "Foro de São Bernardo do Campo",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "28.240,00"
+    "amount": "R$         4.500,00"
   },
   {
-    "processo": "0001906-35.2025.8.26.0071",
-    "comarca": "Bauru",
-    "foro": "Foro de Bauru",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0004209-95.2025.8.26.0564",
+    "comarca": "São Bernardo do Campo",
+    "foro": "Foro de São Bernardo do Campo",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "10.000,00"
+    "amount": "R$         14.313,00"
   },
   {
-    "processo": "0000285-37.2024.8.26.0071",
-    "comarca": "Bauru",
-    "foro": "Foro de Bauru",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "1.320,00"
-  },
-  {
-    "processo": "1022548-02.2024.8.26.0506",
-    "comarca": "Ribeirão Preto",
-    "foro": "Foro de Ribeirão Preto",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "14.120,00"
-  },
-  {
-    "processo": "0002825-50.2025.8.26.0224",
-    "comarca": "Guarulhos",
-    "foro": "Foro de Guarulhos",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "10.710,36"
-  },
-  {
-    "processo": "0008791-06.2024.8.26.0005",
-    "comarca": "SÃO PAULO",
-    "foro": "Foro Regional V - São Miguel Paulista",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "2.904,00"
-  },
-  {
-    "processo": "0000648-72.2024.8.26.0346",
-    "comarca": "Martinópolis",
-    "foro": "Foro de Martinópolis",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "5.000,00"
-  },
-  {
-    "processo": "0019334-62.2024.8.26.0007",
-    "comarca": "SÃO PAULO",
-    "foro": "Foro Regional VII - Itaquera",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "9.395,90"
-  },
-  {
-    "processo": "1002934-26.2024.8.26.0016",
-    "comarca": "SÃO PAULO",
-    "foro": "Foro Central Juizados Especiais Cíveis",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "12.000,00"
-  },
-  {
-    "processo": "0000887-94.2025.8.26.0361",
-    "comarca": "Mogi das Cruzes",
-    "foro": "Foro de Mogi das Cruzes",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "1.129,90"
-  },
-  {
-    "processo": "0001979-07.2025.8.26.0071",
-    "comarca": "Bauru",
-    "foro": "Foro de Bauru",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "3.097,62"
-  },
-  {
-    "processo": "0011078-38.2024.8.26.0361",
-    "comarca": "Mogi das Cruzes",
-    "foro": "Foro de Mogi das Cruzes",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "1.350,00"
-  },
-  {
-    "processo": "0001226-53.2025.8.26.0361",
-    "comarca": "Mogi das Cruzes",
-    "foro": "Foro de Mogi das Cruzes",
-    "disponibilizacao": "09/04/2025",
-    "has_lawyer": false,
-    "amount": "10.500,00"
-  },
-  {
-    "processo": "0002926-77.2025.8.26.0001",
+    "processo": "0003350-22.2025.8.26.0001",
     "comarca": "SÃO PAULO",
     "foro": "Foro Regional I - Santana",
-    "disponibilizacao": "09/04/2025",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "16.743,68"
+    "amount": "R$         3.803,00"
   },
   {
-    "processo": "0025957-73.2024.8.26.0224",
-    "comarca": "Guarulhos",
-    "foro": "Foro de Guarulhos",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0003357-14.2025.8.26.0001",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional I - Santana",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "7.960,00"
+    "amount": "R$         30.360,00"
   },
   {
-    "processo": "0003617-38.2024.8.26.0224",
-    "comarca": "Guarulhos",
-    "foro": "Foro de Guarulhos",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0002987-44.2024.8.26.0462",
+    "comarca": "Poá",
+    "foro": "Foro de Poá",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "28.240,00"
+    "amount": "R$         8.879,38"
   },
   {
-    "processo": "0007567-96.2024.8.26.0566",
-    "comarca": "São Carlos",
-    "foro": "Foro de São Carlos",
-    "disponibilizacao": "09/04/2025",
+    "processo": "0003920-45.2025.8.26.0506",
+    "comarca": "Ribeirão Preto",
+    "foro": "Foro de Ribeirão Preto",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "10.477,54"
+    "amount": "R$         1.520,50"
   },
   {
-    "processo": "0002746-57.2023.8.26.0704",
+    "processo": "0003905-39.2025.8.26.0001",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional I - Santana",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         15.107,18"
+  },
+  {
+    "processo": "0002661-60.2024.8.26.0082",
+    "comarca": "Boituva",
+    "foro": "Foro de Boituva",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         22.874,56"
+  },
+  {
+    "processo": "0012815-83.2024.8.26.0003",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional III - Jabaquara",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         9.999,99"
+  },
+  {
+    "processo": "0012720-59.2024.8.26.0001",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional I - Santana",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         17.400,00"
+  },
+  {
+    "processo": "0001060-77.2024.8.26.0095",
+    "comarca": "Brotas",
+    "foro": "Foro de Brotas",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         2.257,55"
+  },
+  {
+    "processo": "0005678-06.2024.8.26.0438",
+    "comarca": "Penápolis",
+    "foro": "Foro de Penápolis",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         5.648,00"
+  },
+  {
+    "processo": "0007123-85.2024.8.26.0009",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional IX - Vila Prudente",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         1.902,94"
+  },
+  {
+    "processo": "0007566-55.2024.8.26.0229",
+    "comarca": "Hortolândia",
+    "foro": "Foro de Hortolândia",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         28.240,00"
+  },
+  {
+    "processo": "0001138-19.2025.8.26.0004",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional IV - Lapa",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         15.635,23"
+  },
+  {
+    "processo": "0016235-84.2024.8.26.0007",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional V - São Miguel Paulista",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         467,16"
+  },
+  {
+    "processo": "0013923-44.2024.8.26.0005",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional V - São Miguel Paulista",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         28.240,00"
+  },
+  {
+    "processo": "0001112-64.2024.8.26.0001",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional I - Santana",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         9.000,00"
+  },
+  {
+    "processo": "0003233-15.2024.8.26.0438",
+    "comarca": "Penápolis",
+    "foro": "Foro de Penápolis",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         28.240,00"
+  },
+  {
+    "processo": "0006873-46.2024.8.26.0011",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional XI - Pinheiros",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         26.450,00"
+  },
+  {
+    "processo": "0010717-86.2024.8.26.0016",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional II - Santo Amaro",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         18.693,80"
+  },
+  {
+    "processo": "0014843-79.2024.8.26.0405",
+    "comarca": "Osasco",
+    "foro": "Foro de Osasco",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         2.800,00"
+  },
+  {
+    "processo": "0001017-02.2022.8.26.0196",
+    "comarca": "Franca",
+    "foro": "Foro de Franca",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         8.555,28"
+  },
+  {
+    "processo": "1003842-56.2024.8.26.0704",
     "comarca": "SÃO PAULO",
     "foro": "Foro Regional XV - Butantã",
-    "disponibilizacao": "09/04/2025",
+    "disponibilizacao": "14/04/2025",
     "has_lawyer": false,
-    "amount": "26.400,00"
+    "amount": "R$         19.021,15"
+  },
+  {
+    "processo": "0002429-63.2025.8.26.0001",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional I - Santana",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         11.827,65"
+  },
+  {
+    "processo": "0000843-48.2024.8.26.0252",
+    "comarca": "Ipaussu",
+    "foro": "Foro de Ipaussu",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         660,00"
+  },
+  {
+    "processo": "0016505-26.2024.8.26.0002",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional II - Santo Amaro",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         4.138,11"
+  },
+  {
+    "processo": "0000228-96.2024.8.26.0498",
+    "comarca": "Ribeirão Bonito",
+    "foro": "Foro de Ribeirão Bonito",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": null
+  },
+  {
+    "processo": "0001140-77.2025.8.26.0007",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional VII - Itaquera",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         23.699,88"
+  },
+  {
+    "processo": "0014120-96.2024.8.26.0005",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional V - São Miguel Paulista",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         22.796,00"
+  },
+  {
+    "processo": "0005676-21.2024.8.26.0152",
+    "comarca": "Cotia",
+    "foro": "Foro de Cotia",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         1.000,00"
+  },
+  {
+    "processo": "0001105-20.2025.8.26.0007",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Regional VII - Itaquera",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         9.767,40"
+  },
+  {
+    "processo": "0008653-06.2024.8.26.0016",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Central Juizados Especiais Cíveis",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         4.837,09"
+  },
+  {
+    "processo": "0001587-09.2023.8.26.0016",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Central Juizados Especiais Cíveis",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         7.000,00"
+  },
+  {
+    "processo": "0000905-09.2024.8.26.0246",
+    "comarca": "Ilha Solteira",
+    "foro": "Foro de Ilha Solteira",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         3.000,00"
+  },
+  {
+    "processo": "0001637-63.2025.8.26.0566",
+    "comarca": "São Carlos",
+    "foro": "Foro de São Carlos",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         3.168,67"
+  },
+  {
+    "processo": "0022605-49.2024.8.26.0114",
+    "comarca": "Campinas",
+    "foro": "Foro de Campinas",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         2.919,86"
+  },
+  {
+    "processo": "0006819-64.2024.8.26.0566",
+    "comarca": "São Carlos",
+    "foro": "Foro de São Carlos",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         5.800,00"
+  },
+  {
+    "processo": "0001106-75.2025.8.26.0016",
+    "comarca": "SÃO PAULO",
+    "foro": "Foro Central Juizados Especiais Cíveis",
+    "disponibilizacao": "14/04/2025",
+    "has_lawyer": false,
+    "amount": "R$         7.414,49"
   }
 ]
